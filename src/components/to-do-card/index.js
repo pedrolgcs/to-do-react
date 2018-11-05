@@ -8,7 +8,7 @@ class ToDoCard extends Component {
     super(props)
     this.state = {
       todos: [],
-      msg: false
+      alert: false
     }
   }
   // delete todo
@@ -27,14 +27,15 @@ class ToDoCard extends Component {
       let todos = [...this.state.todos, todo]
       this.setState({
         todos: todos,
-        msg: false
+        alert: false
       })
     } else {
       this.setState({
-        msg: true
+        alert: true
       })
     }
   }
+  // check to-do
   check = (todo) => {
     todo.check = !todo.check
     this.setState({
@@ -52,9 +53,9 @@ class ToDoCard extends Component {
             <div className = "card-body">
               <AddTodo addTodo = { this.addTodo }/>
               {/* mensagem de error para campos com menos de 3 caractres */}
-              { this.state.msg ? <span className = "alert alert-warning alert-dismissible msg">
+              { this.state.alert ? <span className = "alert alert-warning alert-dismissible msg">
                 mínimo três (3) caracteres 
-                <button type="button" onClick = { () => this.setState({ msg: false })} className = "close" data-dismiss = "alert" aria-label="Close">
+                <button type="button" onClick = { () => this.setState({ alert: false })} className = "close" data-dismiss = "alert" aria-label="Close">
                   <span aria-hidden = "true">&times;</span>
                 </button>
               </span> : null }
