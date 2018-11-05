@@ -1,0 +1,9 @@
+.add-form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add-form form input {
+  min-width: 30vw;
+}

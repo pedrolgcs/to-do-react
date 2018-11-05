@@ -1,0 +1,25 @@
+.list-group {
+  margin-top: 1vh;
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.list-group li {
+  display: flex;
+  align-items: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: darkgray;
+}
+
+.on {
+  color: forestgreen;
+}
+
+.hidden {
+  visibility: hidden;
+}
