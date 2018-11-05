@@ -5,6 +5,7 @@
 }
 
 .list-group li {
+  font-size: 20px;
   display: flex;
   align-items: center;
   padding-top: 2vh;
